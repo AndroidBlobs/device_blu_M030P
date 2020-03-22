@@ -1,0 +1,109 @@
+#
+# from device/maisui/x6335_blu_walmart_80_o1_go/system.prop
+#
+#
+# system.prop for generic sdk
+#
+
+rild.libpath=mtk-ril.so
+rild.libargs=-d /dev/ttyC0
+
+
+# MTK, Infinity, 20090720 {
+wifi.interface=wlan0
+# MTK, Infinity, 20090720 }
+
+# MTK, mtk03034, 20101210 {
+ro.mediatek.wlan.wsc=1
+# MTK, mtk03034 20101210}
+# MTK, mtk03034, 20110318 {
+ro.mediatek.wlan.p2p=1
+# MTK, mtk03034 20110318}
+
+# MTK, mtk03034, 20101213 {
+mediatek.wlan.ctia=0
+# MTK, mtk03034 20101213}
+
+
+#
+wifi.tethering.interface=ap0
+#
+
+wifi.direct.interface=p2p0
+#dalvik.vm.heapgrowthlimit=128m
+#dalvik.vm.heapsize=256m
+
+# USB MTP WHQL
+ro.sys.usb.mtp.whql.enable=0
+
+# Power off opt in IPO
+sys.ipo.pwrdncap=2
+
+ro.sys.usb.storage.type=mtp
+
+# USB BICR function
+ro.sys.usb.bicr=no
+
+# USB Charge only function
+ro.sys.usb.charging.only=yes
+
+# audio
+ro.camera.sound.forced=0
+ro.audio.silent=0
+
+ro.zygote.preload.enable=0
+
+# temporary enables NAV bar (soft keys)
+qemu.hw.mainkeys=0
+
+ro.kernel.zio=38,108,105,16
+#ro.kernel.qemu=0
+#ro.kernel.qemu.gles=0
+ro.opengles.version=131072
+#ro.boot.selinux=disable
+
+# Disable dirty region for Mali
+debug.hwui.render_dirty_regions=false
+
+persist.sys.timezone=America/New_York
+
+ro.wtk.corner_radius=18
+
+#add BugID:XLSSS-147 gaoshan 20180408 start
+ro.wtk_remove_clean_all=yes
+persist.operator.optr=CUST
+#add BugID:XLSSS-147 gaoshan 20180408 end
+
+# add for BLU needs begin
+#ro.boot.hardware.sku=
+#ro.build.custom_version=
+#ro.build.custom_int_version=
+blu.spec.ram=1GB
+blu.spec.rom=8GB
+blu.spec.chipset=MT6580A/WA
+blu.spec.chipset.info=Quad-Core Cortex A7 1.3GH
+blu.spec.simslots=2
+blu.spec.2G=850/900/1800/1900
+blu.spec.3G=B1/B2/B4/B5/B8
+blu.spec.4G=
+blu.spec.cdma=
+blu.spec.battery=External
+blu.spec.battery.capacity=2500mAh
+blu.spec.camera.rear=8MP
+blu.spec.camera.rear.default=8MP
+blu.spec.camera.front=5MP
+blu.spec.camera.front.default=5MP
+blu.spec.languages = 37
+blu.spec.wifi.2.4=2.4 GHz 802.11b/g/n
+blu.spec.wifi.5.0=
+blu.spec.bluetooth=4.2
+blu.display.size=5.99
+blu.display.resolution=480*960
+blu.spec.volte = No
+# add for BLU needs end
+
+#add by wangjian for signal 20180513 start
+ro.wtk_custom_signal=blu
+#add by wangjian for signal 20180513 end
+
+#
